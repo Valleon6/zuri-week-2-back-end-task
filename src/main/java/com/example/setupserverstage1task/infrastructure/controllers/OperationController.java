@@ -15,16 +15,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class OperationController {
     private OperationService operationService;
 
-
     @PostMapping(path = "/operation-calculation")
-    public ResponseEntity<OperationResponse> operationResult(@RequestBody OperationRequest operationRequest) throws Exception {
+    public ResponseEntity<OperationResponse> operationResult(@RequestBody OperationRequest operationRequest) {
 
         return new ResponseEntity<>(new OperationResponse(
                 "Valleon",
                 operationRequest.getOperationEnum(),
-                operationService.getResult() ),
+                (operationService.operationImpl(operationRequest))),
                 HttpStatus.OK);
 
     }
+
+
 
 }
