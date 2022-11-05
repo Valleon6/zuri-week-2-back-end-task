@@ -20,8 +20,9 @@ public class OperationController {
 
         return new ResponseEntity<>(new OperationResponse(
                 "Valleon",
-                operationRequest.getOperationEnum(),
-                (operationService.operationImpl(operationRequest))),
+                (operationService.operationImpl(operationRequest)),
+                operationRequest.getOperation_type()
+                ),
                 HttpStatus.OK);
 
     }

@@ -1,6 +1,6 @@
 package com.example.setupserverstage1task.payload.response;
 
-import com.example.setupserverstage1task.infrastructure.services.OperationEnum;
+import com.example.setupserverstage1task.infrastructure.services.Operation_Type;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,8 +11,9 @@ import lombok.Setter;
 public class OperationResponse {
 
     private String slackUsername;
-    private OperationEnum operationEnum;
     private int result;
+    private Operation_Type operation_type;
+
 
 
 }

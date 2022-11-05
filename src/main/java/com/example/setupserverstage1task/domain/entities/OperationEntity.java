@@ -1,6 +1,6 @@
 package com.example.setupserverstage1task.domain.entities;
 
-import com.example.setupserverstage1task.infrastructure.services.OperationEnum;
+import com.example.setupserverstage1task.infrastructure.services.Operation_Type;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class OperationEntity {
 
-    private OperationEnum operationEnum;
+    private Operation_Type operationType;
     private int x;
     private int y;
 

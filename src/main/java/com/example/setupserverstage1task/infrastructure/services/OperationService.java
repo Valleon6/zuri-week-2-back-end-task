@@ -13,16 +13,16 @@ public class OperationService implements OperationServiceInterface {
 
         int x = operationRequest.getX();
         int y = operationRequest.getY();
-       OperationEnum operationEnum = operationRequest.getOperationEnum();
+       Operation_Type operationType = operationRequest.getOperation_type();
 
 
-        if (operationEnum == OperationEnum.ADDITION) {
+        if (operationType == Operation_Type.ADDITION) {
             return (x + y);
-        } else if ((operationEnum == OperationEnum.SUBTRACTION)) {
+        } else if ((operationType == Operation_Type.SUBTRACTION)) {
             return (x - y);
-        } else if (operationEnum == OperationEnum.MULTIPLICATION) {
+        } else if (operationType == Operation_Type.MULTIPLICATION) {
             return (x * y);
-        } else if (operationEnum.toString().contains("add")) {
+        } else if (operationType.toString().contains("add")) {
             return 30;
         } else {
             return 1;

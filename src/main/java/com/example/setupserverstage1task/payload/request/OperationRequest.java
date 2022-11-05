@@ -1,6 +1,6 @@
 package com.example.setupserverstage1task.payload.request;
 
-import com.example.setupserverstage1task.infrastructure.services.OperationEnum;
+import com.example.setupserverstage1task.infrastructure.services.Operation_Type;
 import lombok.*;
 
 @Getter
@@ -8,17 +8,16 @@ import lombok.*;
 
 public class OperationRequest {
 
-    private OperationEnum operationEnum;
+    private Operation_Type operation_type;
     private int x;
     private int y;
 
-    public OperationRequest(OperationEnum operationEnum, int x, int y) {
-        this.operationEnum = operationEnum;
+
+    public OperationRequest(Operation_Type operation_type, int x, int y) {
+        this.operation_type = operation_type;
         this.x = x;
         this.y = y;
     }
 
-    public OperationRequest(OperationEnum operationEnum) {
-        this.operationEnum = operationEnum;
-    }
+
 }
